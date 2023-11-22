@@ -4,13 +4,15 @@
  */
 package Main.java.com.taller;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author Edward Esteban Dávila Salzar 104623010331
  */
-public class Automovil extends Vehiculo {
-
-    private int numeroPuertas;
+public @Data class Automovil extends Vehiculo {
 
     // Constructores, getters y setters
     // Otros métodos específicos para automóviles
@@ -24,12 +26,6 @@ public class Automovil extends Vehiculo {
         return costobase + (numeroPuertas * 6);
     }
 
-    public int getNumeroPuertas() {
-        return numeroPuertas;
-    }
-
-    public void setNumeroPuertas(int numeroPuertas) {
-        this.numeroPuertas = numeroPuertas;
-    }
+    private @Getter @Setter int numeroPuertas;
 
 }
