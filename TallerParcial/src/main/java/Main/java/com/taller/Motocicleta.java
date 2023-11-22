@@ -4,13 +4,15 @@
  */
 package Main.java.com.taller;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author Edward Esteban Dávila Salzar 104623010331
  */
-public class Motocicleta extends Vehiculo {
-
-    private int cilindrada;
+public @Data class Motocicleta extends Vehiculo {
 
     // Constructores, getters y setters
     // Otros métodos específicos para motocicletas
@@ -19,11 +21,6 @@ public class Motocicleta extends Vehiculo {
         this.cilindrada = cilindrada;
     }
 
-    public void setCilindrada(int cilindrada) {
-        this.cilindrada = cilindrada;
-    }
+    private @Getter @Setter int cilindrada;
 
-    public int getCilindrada() {
-        return this.cilindrada;
-    }
 }
