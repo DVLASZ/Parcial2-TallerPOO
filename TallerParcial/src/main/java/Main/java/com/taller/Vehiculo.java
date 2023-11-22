@@ -4,17 +4,15 @@
  */
 package Main.java.com.taller;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author Edward Esteban Dávila Salzar 104623010331
  */
-public class Vehiculo {
-
-    private String marca;
-    private String modelo;
-    private String placa;
-    private String horaIngreso;
-    private String horaSalida;
+public @Data class Vehiculo {
 
     public Vehiculo(String marca, String modelo, String placa, String horaIngreso) {
         this.marca = marca;
@@ -42,44 +40,6 @@ public class Vehiculo {
 
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public String getHoraIngreso() {
-        return horaIngreso;
-    }
-
-    public String getHoraSalida() {
-        return horaSalida;
-    }
-
-    public void setHoraIngreso(String horaIngreso) {
-        this.horaIngreso = horaIngreso;
-    }
-
-    public void setHoraSalida(String horaSalida) {
-        this.horaSalida = horaSalida;
-    }
+    private @Getter @Setter String marca, modelo, placa, horaIngreso, horaSalida;
 
 }
